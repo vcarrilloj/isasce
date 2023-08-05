@@ -1,5 +1,5 @@
-function hectorLopez() {
-    limpiarCamposHector();
+function victoCarrillo() {
+    limpiarCamposCarrillo();
     // Acá de define la función para guardar datos dentro de la función mostrarModal (función anidada)
     function guardarDatos() {
         /**
@@ -7,7 +7,7 @@ function hectorLopez() {
          */
 
         // Por ejemplo:
-        var inputValor = $("#input_valor_hector").val();
+        var inputValor = $("#input_valor_victor").val();
         console.log('Valor capturado:', inputValor);
         /** 
          * Se crea la ruta para enviar los datos al back end mediante la tecnología FETCH de Js
@@ -19,5 +19,5 @@ function hectorLopez() {
     }
 
     // Asignaa la función guardarDatos al botón de guardar en el modal
-    $('#boton_guardar_datos_sucursal').click(guardarDatos);
+    $('#boton_guardar_datos_personal').click(guardarDatos);
 }
