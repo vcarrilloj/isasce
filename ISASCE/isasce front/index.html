@@ -8,30 +8,16 @@
 
     <!--Librerias (frameworks)-------------------------------------------------------------------------------->
     <!--jQuery-->
-    <script type="text/javascript" src="../jquery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="jquery/jquery-3.3.1.min.js"></script>
     <!--Bootstrap con material desing-->
-    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../bootstrap/mdb.css">
-    <script type="text/javascript" src="../bootstrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/mdb.css">
+    <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
     <!-- Incluir scripts de Bootstrap y jQuery -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Incluir estilos de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!--Sweetalert2-->
-    <script language="JavaScript" type="text/javascript" src="../sweetalert2/sweetalert2.js"></script>
-    
-    <!--Scripts -------------------------------------------------------------------------------------->
-    <!-- Limpiar Campos -->
-    <script language="JavaScript" type="text/javascript" src="/js/limpiarCampos.js"></script>
-    <!-- ANDRÉS TORRES -->
-    <script language="JavaScript" type="text/javascript" src="/js/andresTorres.js"></script>
-    <!-- ANDRÉS PEDROZA -->
-    <script language="JavaScript" type="text/javascript" src="/js/andresPedroza.js"></script>
-    <!-- JHOANA ALVARADO -->
-    <script language="JavaScript" type="text/javascript" src="/js/jhoanaAlvarado.js"></script>
-    <!-- HECTOR LÓPEZ -->
-    <script language="JavaScript" type="text/javascript" src="/js/hectorLopez.js"></script>
-
 </head>
 
 <body>
@@ -53,9 +39,8 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" data-target="#modal_crear_cliente" data-toggle="modal"
                                 onclick="andresTorres()">Andrés Torres</a>
-
-                            <a href="#" class="dropdown-item" data-target="#modal_crear_proveedor" data-toggle="modal"
-                                onclick="mostrarModal()">Andrés Pedroza</a>
+                                 
+                            <a href="#" class="dropdown-item" data-target="#modal_crear_proveedor" data-toggle="modal">Andrés Pedroza</a>
 
                             <a class="dropdown-item" data-target="#modal_crear_producto" data-toggle="modal"
                                 onclick="jhoanaAlvarado()">Jhoana Alvarado</a>
@@ -115,34 +100,66 @@
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
+                <h5 class="modal-title" id="mdPersonas"><b>Infomación del Proveedor</b></h5>
                 <div class="modal-header">
-                    <label class="modal-title">FORMATO DE CREACIÓN DE PROVEEDOR</label>
+                    <label class="modal-title">Creación de proveedores</label>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="table-wrapper">
-                    <div class="modal-body" align="center">
+                    <div class="modal-body">
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-12 my-auto-header">
-                                    <label class="label_azul">INFORMACIÓN PROVEEDOR</label>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                    <div class="form-group">
+                                      <label for="id">Razón social</label>
+                                      <input type="text" id="PR01" name="PR01" class="form-control" title="Nombres por el cual desea realizar una búsqueda" autocomplete="off"/>
+                                    </div>
                                 </div>
-                                <div class="col-md-12 my-auto">
-                                    <label>Ingresa un valor:</label>
-                                    <input id="input_valor_pedroza" type="text">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                                    <div class="form-group">
+                                        <label class="input-control" for="PR09">Tipo de identificación *</label>
+                                        <select class="form-control" name="PR09" id="PR09" required="required" title="Iglesia a la que pertenece el usuario">
+                                        <option value="">Elija una opción</option>
+                                        <option value="NIT">NIT</option>
+                                        <option value="CC">Cedula de ciudadanía</option>
+                                        <option value="PT">Pasaporte</option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="modal-footer">
-                                <!-- Botón para guardar datos -->
-                                <button id="boton_guardar_datos_proveedor" type="button" class="btn btn-primary">Guardar
-                                    Datos</button>
-                            </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                                    <div class="form-group">
+                                        <label for="id">Numero identificación *</label>
+                                        <input type="text" id="PR2M" name="PR02" class="form-control" title="Nombres por el cual desea realizar una búsqueda" autocomplete="off"/>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                    <div class="form-group">
+                                        <label for="id">Dirección *</label>
+                                        <input type="text" id="PR2M" name="PR02" class="form-control" title="Nombres por el cual desea realizar una búsqueda" autocomplete="off"/>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                    <div class="form-group">
+                                        <label for="id">Email *</label>
+                                        <input type="email" id="PR2M" name="PR02" class="form-control" title="Nombres por el cual desea realizar una búsqueda" autocomplete="off"/>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                                    <div class="form-group">
+                                        <label for="id">Telefono *</label>
+                                        <input type="text" id="PR2M" name="PR02" class="form-control" title="Nombres por el cual desea realizar una búsqueda" autocomplete="off"/>
+                                    </div>
+                                </div>
+
+                            </div><!--Fin <div class="row">-->
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button id="boton_cerrar_modal" type="button" class="btn btn-default"
-                            data-dismiss="modal">Cerrar</button>
-                    </div>
+                        <button id="boton_guardar_datos_proveedor" type="submit" name="Boton" value="Boton"  class="btn btn-success">Aceptar
+                        </button>
+                        <button id="boton_cerrar_modal" type="button" class="btn btn-dark" data-dismiss="modal">Cerrar</button>
+                      </div>
                 </div>
             </div>
         </div>
@@ -224,6 +241,7 @@
         </div>
     </div>
 </body>
-<script src="js/andresPedroza.js" type=""></script>
-<script src="sweetalert2/sweetalert2.js" type=""></script>
+<script language="JavaScript" type="text/javascript" src="sweetalert2/sweetalert2.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/limpiarCampos.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/andresPedroza.js"></script>
 </html>
