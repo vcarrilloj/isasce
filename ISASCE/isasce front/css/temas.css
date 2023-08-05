@@ -1,0 +1,375 @@
+.hover_mano:hover {
+  cursor: pointer;
+  background-color: #eaf0d7;
+}
+.td_row {
+  border-radius: 10px;
+  border-inline-end-color: red;
+}
+/*Para mostrar modals anchos se modificaron las clases modal-lg y modal-xl en el bootstrap.css*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  /*width:80%;*/
+  border: 1px solid #ddd;
+  table-layout: auto;
+}
+
+.table tr:first-child {
+  background-color: rgb(137, 192, 192); /* Colorear primera fila */
+}
+
+.table tr:not(:first-child) {
+  border-top: 1px solid black; /* Mostrar líneas horizontales en todas las filas excepto la primera */
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+body {
+  /*background: #1d1d1d;*/
+  /*color: #fff;*/
+  font-family: arial;
+  font-size: 15px;
+  margin: 0;
+  padding: 5px 5px 5px 5px; /*arriba, derecha, abajo, izquierda*/
+}
+input {
+  background: #ffffff;
+  color: #000000;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 5px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: 0.5s ease;
+  border: 2px solid #000000;
+  width: 95%;
+  max-width: 500px;
+  box-sizing: border-box;
+  background: #ffffff;
+  color: #000000;
+}
+input:hover {
+  padding-left: 30px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(90, 90, 90, 0.2) inset;
+  box-shadow: 0 2px 2px 0 rgba(90, 90, 90, 0.2) inset;
+  border-radius: 4px;
+  border: 2px solid black;
+}
+input:focus {
+  padding-left: 25px;
+  /*background: rgba(255,253,232,1);*/
+}
+input.input_pequeno {
+  width: 80px;
+}
+
+.input_pequeno_deshabilitado {
+  width: 80px;
+  background: #d6d6d6; /*Gris*/
+  background-image: none;
+  opacity: 0.4;
+  cursor: not-allowed !important;
+}
+input.input_mediano {
+  width: 120px;
+}
+textarea {
+  background: #ffffff;
+  color: #000000;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 5px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: 0.5s ease;
+  border: 2px solid #000000;
+  width: 95%;
+  max-width: 500px;
+  box-sizing: border-box;
+  background: #ffffff;
+  color: #000000;
+}
+textarea:hover {
+  padding-left: 30px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(90, 90, 90, 0.2) inset;
+  box-shadow: 0 2px 2px 0 rgba(90, 90, 90, 0.2) inset;
+  border-radius: 4px;
+  border: 2px solid black;
+}
+textarea:focus {
+  padding-left: 25px;
+  /*background: rgba(255,253,232,1);*/
+}
+td {
+  text-align: center;
+  padding: 5px 5px 5px 5px;
+}
+
+.titulos_en_panel_de_control {
+  color: #3d1303;
+  font-weight: bold;
+}
+.input_con_rueda_cargando {
+  background-image: url("../img/rueda_pequena_cargando.gif");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 20px 20px;
+}
+.input_deshabilitado {
+  background: #d6d6d6; /*Gris*/
+  background-image: none;
+  opacity: 0.4;
+  cursor: not-allowed !important;
+}
+.anuncios_rojos /*Como por ejemplos para autocompletes cuando no se encontró nada*/ {
+  color: red;
+  font: normal 14px;
+}
+.anuncios_negros {
+  color: black;
+  font: normal 14px;
+}
+.anuncios_verdes {
+  color: green;
+  font: normal 14px;
+}
+.elemento_oculto {
+  display: none;
+}
+.tablas_listas {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 5px;
+}
+.titulos_tablas_listas {
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+}
+.input_validado_negativamente {
+  border: 2px solid red;
+}
+hr.linea_dashed {
+  background-color: #fff;
+  border-top: 4px dashed #8c8b8b;
+}
+
+select {
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #444;
+  line-height: 1.3;
+  padding: 0.6em 1.4em 0.5em 0.8em;
+  /*width: 30%;*/
+  /*max-width: 100%;*/
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid #aaa;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+  border-radius: 0.5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+}
+
+label {
+  display: inline-block;
+  font: normal 16px / normal "Coda", Helvetica, sans-serif;
+  color: #000000;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.66);
+}
+.label_rojo {
+  display: inline-block;
+  font: normal 18px / normal "Coda", Helvetica, sans-serif;
+  color: #ff0000;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.66);
+}
+.label_azul {
+  display: inline-block;
+  font: normal 18px / normal "Coda", Helvetica, sans-serif;
+  color: #33afff;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.66);
+}
+
+.label_titulos {
+  display: inline-block;
+  font: bold 18px / normal "Coda", Helvetica, sans-serif;
+  color: #000000;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.66);
+}
+
+.texto_grande {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+}
+
+H1 {
+  display: inline-block;
+  font: normal "Coda", Helvetica, sans-serif;
+  color: #000000;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.66);
+}
+
+/* ESTILO PARA SPAN----------------------------------------------------
+span
+{
+  font-weight:normal;color:#000000;
+  letter-spacing:0pt;
+  word-spacing:1pt;
+  font-size:19px;
+  text-align:center;
+  font-family:arial black, sans-serif;
+  line-height:0;
+}
+*/
+
+/*RADIO BUTTONS -----------------------------------------*/
+.radio_button {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: 10px;
+}
+/*CHECKBOXES -----------------------------------------------------*/
+
+/* The container_checkbox */
+.container_checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container_checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container_checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container_checkbox input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container_checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container_checkbox .checkmark:after {
+  left: 11px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* PARRA QUE LOS BOTONES SALGAN PEGADOS EN LA CLASE col DE Bootstrap*/
+.col {
+  display: inline-block;
+}
+/*PARA AUTOCOMPLETE - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+.tt-menu {
+  width: 300px;
+}
+ul.typeahead {
+  margin: 0px;
+  padding: 10px 0px;
+}
+ul.typeahead.dropdown-menu li a {
+  padding: 10px !important;
+  width: auto;
+  height: auto;
+  /*border-bottom:#CCC 0px solid;*/
+  color: #000000;
+}
+ul.typeahead.dropdown-menu li:last-child a {
+  width: 500px;
+  border-bottom: 0px !important;
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:focus,
+.dropdown-menu > .active > a:hover {
+  text-decoration: none;
+  background-color: #9bcbeb;
+  outline: 0;
+}
+/*HACE QUE LA TABLA SE PUEDA HACER SCROLL EN UN MODAL CUANDO ESTA VERTICALMENTE ES MUY LARGA*/
+.table-wrapper {
+  max-height: 700px;
+  overflow: auto;
+  display: inline-block;
+}
+
+.wrapper-grande {
+  max-height: 900px;
+  max-width: 1080px;
+  overflow: auto;
+  display: inline-block;
+}
+
+.td_pading_angosto {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 2px;
+}

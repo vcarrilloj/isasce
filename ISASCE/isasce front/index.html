@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar y Lista Desplegable</title>
+
+    <!--Librerias (frameworks)-------------------------------------------------------------------------------->
+    <!--jQuery-->
+    <script type="text/javascript" src="../jquery/jquery-3.3.1.min.js"></script>
+    <!--Bootstrap con material desing-->
+    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/mdb.css">
+    <script type="text/javascript" src="../bootstrap/bootstrap.min.js"></script>
+    <!-- Incluir scripts de Bootstrap y jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Incluir estilos de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--Sweetalert2-->
+    <script language="JavaScript" type="text/javascript" src="../sweetalert2/sweetalert2.js"></script>
+    
+    <!--Scripts -------------------------------------------------------------------------------------->
+    <!-- Limpiar Campos -->
+    <script language="JavaScript" type="text/javascript" src="/js/limpiarCampos.js"></script>
+    <!-- ANDRÉS TORRES -->
+    <script language="JavaScript" type="text/javascript" src="/js/andresTorres.js"></script>
+    <!-- ANDRÉS PEDROZA -->
+    <script language="JavaScript" type="text/javascript" src="/js/andresPedroza.js"></script>
+    <!-- JHOANA ALVARADO -->
+    <script language="JavaScript" type="text/javascript" src="/js/jhoanaAlvarado.js"></script>
+    <!-- HECTOR LÓPEZ -->
+    <script language="JavaScript" type="text/javascript" src="/js/hectorLopez.js"></script>
+
+</head>
+
+<body>
+    <!-- Navbar de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">ISASCE App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Lista Desplegable
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" data-target="#modal_crear_cliente" data-toggle="modal"
+                                onclick="andresTorres()">Andrés Torres</a>
+                            <a class="dropdown-item" data-target="#modal_crear_proveedor" data-toggle="modal"
+                                onclick="andresPedroza()">Andrés Pedroza</a>
+                            <a class="dropdown-item" data-target="#modal_crear_producto" data-toggle="modal"
+                                onclick="jhoanaAlvarado()">Jhoana Alvarado</a>
+                            <a class="dropdown-item" data-target="#modal_crear_personal" data-toggle="modal"
+                                onclick="hectorLopez()">Hector López</a>
+
+                            <!-- FALTAN 3 MODALS, CREAR VENTA (EUDREY), CREAR CREAR SUCURSAL (VICTOR), CREAR CLIENTE (JULIAN) -->
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal crear Cliente - Andrés Torres***************** -->
+    <div class="modal fade" id="modal_crear_cliente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <label class="modal-title">FORMATO DE CREACIÓN DE CLIENTE</label>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="table-wrapper">
+                    <div class="modal-body" align="center">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 my-auto-header">
+                                    <label class="label_azul">INFORMACIÓN CLIENTE</label>
+                                </div>
+                                <div class="col-md-12 my-auto">
+                                    <label>Ingresa un valor:</label>
+                                    <input id="input_valor_torres" type="text">
+                                </div>
+                                <div class="modal-footer">
+                                    <!-- Botón para guardar datos -->
+                                    <button id="boton_guardar_datos_cliente" type="button"
+                                        class="btn btn-primary">Guardar
+                                        Datos</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="boton_cerrar_modal" type="button" class="btn btn-default"
+                            data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal crear Proveedor - Andrés Pedroza***************** -->
+    <div class="modal fade" id="modal_crear_proveedor" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <label class="modal-title">FORMATO DE CREACIÓN DE PROVEEDOR</label>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="table-wrapper">
+                    <div class="modal-body" align="center">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 my-auto-header">
+                                    <label class="label_azul">INFORMACIÓN PROVEEDOR</label>
+                                </div>
+                                <div class="col-md-12 my-auto">
+                                    <label>Ingresa un valor:</label>
+                                    <input id="input_valor_pedroza" type="text">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <!-- Botón para guardar datos -->
+                                <button id="boton_guardar_datos_proveedor" type="button" class="btn btn-primary">Guardar
+                                    Datos</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="boton_cerrar_modal" type="button" class="btn btn-default"
+                            data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal crear Producto - Jhoana Alvarado***************** -->
+    <div class="modal fade" id="modal_crear_producto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <label class="modal-title">FORMATO DE CREACIÓN DE PRODUCTO</label>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="table-wrapper">
+                    <div class="modal-body" align="center">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 my-auto-header">
+                                    <label class="label_azul">INFORMACIÓN PRODUCTO</label>
+                                </div>
+                                <div class="col-md-12 my-auto">
+                                    <label>Ingresa un valor:</label>
+                                    <input id="input_valor_jhoana" type="text">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <!-- Botón para guardar datos -->
+                                <button id="boton_guardar_datos_producto" type="button" class="btn btn-primary">Guardar
+                                    Datos</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="boton_cerrar_modal" type="button" class="btn btn-default"
+                            data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal crear Personal - Hector López***************** -->
+    <div class="modal fade" id="modal_crear_personal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <label class="modal-title">FORMATO DE CREACIÓN DE PERSONAL</label>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="table-wrapper">
+                    <div class="modal-body" align="center">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 my-auto-header">
+                                    <label class="label_azul">INFORMACIÓN PERSONAL</label>
+                                </div>
+                                <div class="col-md-12 my-auto">
+                                    <label>Ingresa un valor:</label>
+                                    <input id="input_valor_hector" type="text">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <!-- Botón para guardar datos -->
+                                <button id="boton_guardar_datos_personal" type="button" class="btn btn-primary">Guardar
+                                    Datos</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="boton_cerrar_modal" type="button" class="btn btn-default"
+                            data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
