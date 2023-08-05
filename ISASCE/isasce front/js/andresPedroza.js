@@ -22,7 +22,7 @@ function andresPedroza() {
 }
 
 function mostrarModal(){
-    
+
     $("#modal_crear_proveedor").modal('show');
     
 }
