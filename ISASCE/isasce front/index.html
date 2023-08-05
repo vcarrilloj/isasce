@@ -5,33 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar y Lista Desplegable</title>
-
     <!--Librerias (frameworks)-------------------------------------------------------------------------------->
     <!--jQuery-->
-    <script type="text/javascript" src="../jquery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="jquery/jquery-3.3.1.min.js"></script>
     <!--Bootstrap con material desing-->
-    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../bootstrap/mdb.css">
-    <script type="text/javascript" src="../bootstrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/mdb.css">
+    <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
     <!-- Incluir scripts de Bootstrap y jQuery -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Incluir estilos de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!--Sweetalert2-->
-    <script language="JavaScript" type="text/javascript" src="../sweetalert2/sweetalert2.js"></script>
-    
-    <!--Scripts -------------------------------------------------------------------------------------->
-    <!-- Limpiar Campos -->
-    <script language="JavaScript" type="text/javascript" src="/js/limpiarCampos.js"></script>
-    <!-- ANDRÉS TORRES -->
-    <script language="JavaScript" type="text/javascript" src="/js/andresTorres.js"></script>
-    <!-- ANDRÉS PEDROZA -->
-    <script language="JavaScript" type="text/javascript" src="/js/andresPedroza.js"></script>
-    <!-- JHOANA ALVARADO -->
-    <script language="JavaScript" type="text/javascript" src="/js/jhoanaAlvarado.js"></script>
-    <!-- HECTOR LÓPEZ -->
-    <script language="JavaScript" type="text/javascript" src="/js/hectorLopez.js"></script>
-
 </head>
 
 <body>
@@ -107,9 +91,6 @@
             </div>
         </div>
     </div>
-
-
-
 <!-- GABRIELA2023 VIERNES -->
 
 
@@ -163,7 +144,7 @@
                             aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="table-wrapper">
-                    <div class="modal-body" align="center">
+                    <div class="modal-body">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 my-auto-header">
@@ -171,29 +152,29 @@
                                 </div>
                                 <div class="col-md-12 my-auto">
                                     <label>COLOR:</label>
-                                    <input id="input_valor_jhoana" type="text">
+                                    <input id="input_color" type="text">
                                 </div>
                                 <div class="col-md-12 my-auto">
                                     <label>PRECIO</label>
-                                    <input id="input_valor_jhoana" type="text">
+                                    <input id="input_precio" type="text">
                                 </div>
                                 <div class="col-md-12 my-auto">
                                     <label>TALLA:</label>
-                                    <input id="input_valor_jhoana" type="text">
+                                    <input id="input_talla" type="text">
                                 </div>
                                 <div class="col-md-12 my-auto">
                                     <label>MATERIAL:</label>
-                                    <input id="input_valor_jhoana" type="text">
+                                    <input id="" type="text">
                                 </div>
                                 <div class="col-md-12 my-auto">
                                     <label>DESCUENTO:</label>
-                                    <input id="input_valor_jhoana" type="text">
+                                    <input id="" type="text">
                                 </div>
                             </div>
                             <div class="modal-footer">
                                 <!-- Botón para guardar datos -->
-                                <button id="boton_guardar_datos_producto" type="button" class="btn btn-primary">Guardar
-                                    Datos</button>
+                                <button id="btn_limpiar" type="button" class="btn btn-primary" onclick="limpiarCamposJhoana()">Borrar</button>
+                                <button id="boton_guardar_datos_producto" type="button" class="btn btn-primary">Guardar</button>
                             </div>
                         </div>
                     </div>
@@ -244,5 +225,7 @@
         </div>
     </div>
 </body>
-
+<script language="JavaScript" type="text/javascript" src="sweetalert2/sweetalert2.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/limpiarCampos.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/jhoanaAlvarado.js"></script>
 </html>
