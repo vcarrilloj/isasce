@@ -9,6 +9,7 @@ function andresPedroza() {
          */
 
         // Por ejemplo:
+        
         var inputValor = $("#input_valor_pedroza").val();
         console.log('Valor capturado:', inputValor);
         /** 

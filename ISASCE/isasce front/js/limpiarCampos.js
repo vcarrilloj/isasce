@@ -10,3 +10,6 @@ function limpiarCamposJhoana(){
 function limpiarCamposHector(){
     $("#input_valor_hector").val("");
 }
+function limpiarCamposCarrillo(){
+    $("#limpiarCamposCarrillo").val("");
+}
