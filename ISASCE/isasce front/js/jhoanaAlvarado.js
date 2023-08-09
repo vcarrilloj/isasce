@@ -5,7 +5,7 @@ function jhoanaAlvarado() {
         /**
          * Acá se capturan los datos del DOM
          */
-
+Swal.fire("Registro exitoso");
         // Por ejemplo:
         var inputValor = $("#input_valor_jhoana").val();
         console.log('Valor capturado:', inputValor);
