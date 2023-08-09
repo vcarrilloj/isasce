@@ -19,5 +19,5 @@ function hectorLopez() {
     }
 
     // Asignaa la función guardarDatos al botón de guardar en el modal
-    $('#boton_guardar_datos_personal').click(guardarDatos);
+    $('#boton_guardar_datos_sucursal').click(guardarDatos);
 }
