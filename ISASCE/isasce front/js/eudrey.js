@@ -1,5 +1,5 @@
-function victorCarrillo() {
-    limpiarCamposCarrillo();
+function eudrey() {
+    limpiarCamposEudrey();
     // Acá de define la función para guardar datos dentro de la función mostrarModal (función anidada)
     function guardarDatos() {
         /**
@@ -7,15 +7,18 @@ function victorCarrillo() {
          */
 
         // Por ejemplo:
-        var inputValor = $("#input_nombre_sucursal").val();
-        console.log('Valor capturado:', inputValor);
+        var fechaVenta = $("#input_fecha_venta").val();
+        console.log('Fecha de venta:', fechaVenta);
+        var nombreCliente = $("#input_nombre_cliente_modal_venta").val();
+        console.log('Nombre cliente:', nombreCliente);
         /** 
          * Se crea la ruta para enviar los datos al back end mediante la tecnología FETCH de Js
          *  
-         */ 
-        // Datos a enviar al servidor en formato JSON // agregar datos faltantes
+         */
+        // Datos a enviar al servidor en formato JSON // Agregar los datos faltantes
         var datos = {
-            inputValor: inputValor
+            fechaVenta: fechaVenta,
+            nombreCliente: nombreCliente
         };
 
         // Configuración para el fetch
@@ -49,10 +52,8 @@ function victorCarrillo() {
                 console.error('Error:', error);
                 Swal.fire('Error al guardar los datos.', '', 'error');
             });
-
-
     }
 
     // Asignaa la función guardarDatos al botón de guardar en el modal
-    $('#boton_guardar_datos_sucursal').click(guardarDatos);
+    $('#boton_guardar_datos_venta').click(guardarDatos);
 }

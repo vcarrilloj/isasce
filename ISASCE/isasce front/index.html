@@ -12,11 +12,9 @@
 
     <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/mdb.css">
-
     <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
-    <!-- Incluir scripts de Bootstrap y jQuery -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Incluir estilos de Bootstrap -->
+
+    <!-- Incluir estilos de Bootstrap & jQuery-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -44,26 +42,74 @@
                                 onclick="andresPedroza()">Andrés Pedroza</a>
                             <a class="dropdown-item" data-target="#modal_crear_producto" data-toggle="modal"
                                 onclick="jhoanaAlvarado()">Jhoana Alvarado</a>
-                                <a class="dropdown-item" data-target="#modal_crear_personal" data-toggle="modal"
+                            <a class="dropdown-item" data-target="#modal_crear_personal" data-toggle="modal"
                                 onclick="hectorLopez()">Hector López</a>
-                                <a class="dropdown-item" data-target="#modal_crear_sucursal" data-toggle="modal"
+                            <a class="dropdown-item" data-target="#modal_crear_sucursal" data-toggle="modal"
                                 onclick="victorCarrillo()">Victor Carrillo</a>
+                            <a class="dropdown-item" data-target="#modal_crear_venta" data-toggle="modal"
+                                onclick="eudrey()">Eudrey</a>
+                            <a class="dropdown-item" data-target="#modal_crear_inventario" data-toggle="modal"
+                                onclick="julian()">Julián</a>
 
-                <!-- FALTAN 2 MODALS, CREAR VENTA (EUDREY), CREAR CLIENTE (JULIAN) -->
-              </div>
-            </li>
-          </ul>
+                            <!-- FALTAN 1 MODAL, CREAR CLIENTE (JULIAN) -->
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
-<!-- JULIAN -->
+    <!-- JULIAN -->
+
+
     <!-- Modal crear Cliente - Andrés Torres***************** -->
     <div class="modal fade" id="modal_crear_cliente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">FORMATO DE CREACIÓN DE CLIENTE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="input_nombre_cliente" class="form-label">Nombre Completo del Cliente:</label>
+                            <input id="input_nombre_cliente" type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="input_fecha_nacimiento" class="form-label">Fecha de nacimiento:</label>
+                            <input id="input_fecha_nacimiento" type="date" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="select_tipo_documento" class="form-label">Tipo de documento:</label>
+                            <select class="form-select" id="select_tipo_documento" required>
+                                <option value="seleccione">Seleccione...</option>
+                                <option value="CC">Cédula de ciudadanía</option>
+                                <option value="NIT">NIT</option>
+                                <option value="PT">Pasaporte</option>
+                            </select>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="boton_guardar_datos_cliente" type="button" class="btn btn-primary">Guardar
+                                Datos</button>
+                            <button id="boton_cerrar_modal" type="button" class="btn btn-default"
+                                data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal crear Sucursal - Victor Carrillo -->
+    <div class="modal fade" id="modal_crear_sucursal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <label class="modal-title">FORMATO DE CREACIÓN DE CLIENTE</label>
+                    <label class="modal-title">FORMATO DE CREACIÓN DE SUCURSAL</label>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">&times;</span></button>
                 </div>
@@ -72,15 +118,15 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 my-auto-header">
-                                    <label class="label_azul">INFORMACIÓN CLIENTE</label>
+                                    <label class="label_azul">INFORMACIÓN SUCURSAL</label>
                                 </div>
                                 <div class="col-md-12 my-auto">
-                                    <label>Ingresa un valor:</label>
-                                    <input id="input_valor_torres" type="text">
+                                    <label>Ingresa el nombre de la sucursal:</label>
+                                    <input id="input_nombre_sucursal" type="text">
                                 </div>
                                 <div class="modal-footer">
                                     <!-- Botón para guardar datos -->
-                                    <button id="boton_guardar_datos_cliente" type="button"
+                                    <button id="boton_guardar_datos_sucursal" type="button"
                                         class="btn btn-primary">Guardar
                                         Datos</button>
                                 </div>
@@ -96,14 +142,57 @@
         </div>
     </div>
 
-<!-- Modal crear Sucursal - Victor Carrillo -->
+    <!-- Modal crear Venta - Eudrey -->
+    <div class="modal fade" id="modal_crear_venta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <label class="modal-title">FORMATO DE CREACIÓN DE VENTA</label>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="table-wrapper">
+                    <div class="modal-body" align="center">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 my-auto-header">
+                                    <label class="label_azul">INFORMACIÓN VENTA</label>
+                                </div>
+                                <div class="col-md-12 my-auto">
+                                    <label>Ingresa la fecha de la venta:</label>
+                                    <input id="input_fecha_venta" type="date">
+                                </div>
+                                <hr>
 
+                                <div class="col-md-12 my-auto">
+                                    <label>Ingresa el nombre del cliente:</label>
+                                    <input id="input_nombre_cliente_modal_venta" type="text">
+                                </div>
+                                <hr>
+
+                                <div class="modal-footer">
+                                    <!-- Botón para guardar datos -->
+                                    <button id="boton_guardar_datos_venta" type="button" class="btn btn-primary">Guardar
+                                        Datos</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="boton_cerrar_modal" type="button" class="btn btn-default"
+                            data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal crear Proveedor - Andrés Pedroza***************** -->
 
     <div class="modal fade" id="modal_crear_proveedor" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <h5 class="modal-title" id="mdPersonas"><b>Infomación del Proveedor</b></h5>
                 <div class="modal-header">
@@ -117,43 +206,54 @@
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                     <div class="form-group">
-                                      <label for="id">Razón social</label>
-                                      <input type="text" id="PR01" name="PR01" class="form-control" title="Nombres por el cual desea realizar una búsqueda" autocomplete="off"/>
+                                        <label for="id">Razón social</label>
+                                        <input type="text" id="PR01" name="PR01" class="form-control"
+                                            title="Nombres por el cual desea realizar una búsqueda"
+                                            autocomplete="off" />
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                                     <div class="form-group">
                                         <label class="input-control" for="PR09">Tipo de identificación *</label>
-                                        <select class="form-control" name="PR09" id="PR09" required="required" title="Iglesia a la que pertenece el usuario">
-                                        <option value="">Elija una opción</option>
-                                        <option value="NIT">NIT</option>
-                                        <option value="CC">Cedula de ciudadanía</option>
-                                        <option value="PT">Pasaporte</option>
+                                        <select class="form-control" name="PR09" id="PR09" required="required"
+                                            title="Iglesia a la que pertenece el usuario">
+                                            <option value="">Elija una opción</option>
+                                            <option value="NIT">NIT</option>
+                                            <option value="CC">Cedula de ciudadanía</option>
+                                            <option value="PT">Pasaporte</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                                     <div class="form-group">
                                         <label for="id">Numero identificación *</label>
-                                        <input type="text" id="PR2M" name="PR02" class="form-control" title="Nombres por el cual desea realizar una búsqueda" autocomplete="off"/>
+                                        <input type="text" id="PR2M" name="PR02" class="form-control"
+                                            title="Nombres por el cual desea realizar una búsqueda"
+                                            autocomplete="off" />
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                     <div class="form-group">
                                         <label for="id">Dirección *</label>
-                                        <input type="text" id="PR2M" name="PR02" class="form-control" title="Nombres por el cual desea realizar una búsqueda" autocomplete="off"/>
+                                        <input type="text" id="PR2M" name="PR02" class="form-control"
+                                            title="Nombres por el cual desea realizar una búsqueda"
+                                            autocomplete="off" />
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                     <div class="form-group">
                                         <label for="id">Email *</label>
-                                        <input type="email" id="PR2M" name="PR02" class="form-control" title="Nombres por el cual desea realizar una búsqueda" autocomplete="off"/>
+                                        <input type="email" id="PR2M" name="PR02" class="form-control"
+                                            title="Nombres por el cual desea realizar una búsqueda"
+                                            autocomplete="off" />
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                                     <div class="form-group">
                                         <label for="id">Telefono *</label>
-                                        <input type="text" id="PR2M" name="PR02" class="form-control" title="Nombres por el cual desea realizar una búsqueda" autocomplete="off"/>
+                                        <input type="text" id="PR2M" name="PR02" class="form-control"
+                                            title="Nombres por el cual desea realizar una búsqueda"
+                                            autocomplete="off" />
                                     </div>
                                 </div>
 
@@ -161,133 +261,179 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button id="boton_guardar_datos_proveedor" type="submit" name="Boton" value="Boton"  class="btn btn-success">Aceptar
+                        <button id="boton_guardar_datos_proveedor" type="submit" name="Boton" value="Boton"
+                            class="btn btn-success">Aceptar
                         </button>
-                        <button id="boton_cerrar_modal" type="button" class="btn btn-dark" data-dismiss="modal">Cerrar</button>
-                      </div>
+                        <button id="boton_cerrar_modal" type="button" class="btn btn-dark"
+                            data-dismiss="modal">Cerrar</button>
+                    </div>
+                    <div class="modal fade" id="modal_crear_proveedor" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <label class="modal-title">FORMATO DE CREACIÓN DE PROVEEDOR</label>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="table-wrapper">
+                                    <div class="modal-body" align="center">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-12 my-auto-header">
+                                                    <label class="label_azul">INFORMACIÓN PROVEEDOR</label>
+                                                </div>
+                                                <div class="col-md-12 my-auto">
+                                                    <label>Ingresa un valor:</label>
+                                                    <input id="input_valor_pedroza" type="text" />
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <!-- Botón para guardar datos -->
+                                                <button id="boton_guardar_datos_proveedor" type="button"
+                                                    class="btn btn-primary">
+                                                    Guardar Datos
+                                                </button>
 
-    <div
-      class="modal fade"
-      id="modal_crear_proveedor"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <label class="modal-title">FORMATO DE CREACIÓN DE PROVEEDOR</label>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="table-wrapper">
-            <div class="modal-body" align="center">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-12 my-auto-header">
-                    <label class="label_azul">INFORMACIÓN PROVEEDOR</label>
-                  </div>
-                  <div class="col-md-12 my-auto">
-                    <label>Ingresa un valor:</label>
-                    <input id="input_valor_pedroza" type="text" />
-                  </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button id="boton_cerrar_modal" type="button" class="btn btn-default"
+                                            data-dismiss="modal">
+                                            Cerrar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                  <!-- Botón para guardar datos -->
-                  <button
-                    id="boton_guardar_datos_proveedor"
-                    type="button"
-                    class="btn btn-primary">
-                    Guardar Datos
-                  </button>
-
-                </div>
-              </div>
             </div>
-            <div class="modal-footer">
-              <button
-                id="boton_cerrar_modal"
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal">
-                Cerrar
-              </button>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
 
     <!-- Modal crear Producto - Jhoana Alvarado***************** -->
-    <div
-      class="modal fade"
-      id="modal_crear_producto"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <label class="modal-title">FORMATO DE CREACIÓN DE PRODUCTO</label>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="table-wrapper">
-            <div class="modal-body" align="center">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-12 my-auto-header">
-                    <label class="label_azul">INFORMACIÓN PRODUCTO</label>
-                  </div>
-                  <div class="col-md-12 my-auto">
-                    <label>Ingresa un valor:</label>
-                    <input id="input_valor_jhoana" type="text" />
-                  </div>
+    <div class="modal fade" id="modal_crear_producto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <label class="modal-title">FORMATO DE CREACIÓN DE PRODUCTO</label>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-
                 <div class="table-wrapper">
-                    <div class="modal-body">
+                    <div class="modal-body" align="center">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 my-auto-header">
                                     <label class="label_azul">INFORMACIÓN PRODUCTO</label>
                                 </div>
                                 <div class="col-md-12 my-auto">
-                                    <label>COLOR:</label>
-                                    <input id="input_color" type="text">
-                                </div>
-                                <div class="col-md-12 my-auto">
-                                    <label>PRECIO</label>
-                                    <input id="input_precio" type="text">
-                                </div>
-                                <div class="col-md-12 my-auto">
-                                    <label>TALLA:</label>
-                                    <input id="input_talla" type="text">
-                                </div>
-                                <div class="col-md-12 my-auto">
-                                    <label>MATERIAL:</label>
-                                    <input id="" type="text">
-                                </div>
-                                <div class="col-md-12 my-auto">
-                                    <label>DESCUENTO:</label>
-                                    <input id="" type="text">
+                                    <label>Ingresa un valor:</label>
+                                    <input id="input_valor_jhoana" type="text" />
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                                <!-- Botón para guardar datos -->
-                                <button id="btn_limpiar" type="button" class="btn btn-primary" onclick="limpiarCamposJhoana()">Borrar</button>
-                                <button id="boton_guardar_datos_producto" type="button" class="btn btn-primary">Guardar</button>
+
+                            <div class="table-wrapper">
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12 my-auto-header">
+                                                <label class="label_azul">INFORMACIÓN PRODUCTO</label>
+                                            </div>
+                                            <div class="col-md-12 my-auto">
+                                                <label>COLOR:</label>
+                                                <input id="input_color" type="text">
+                                            </div>
+                                            <div class="col-md-12 my-auto">
+                                                <label>PRECIO</label>
+                                                <input id="input_precio" type="text">
+                                            </div>
+                                            <div class="col-md-12 my-auto">
+                                                <label>TALLA:</label>
+                                                <input id="input_talla" type="text">
+                                            </div>
+                                            <div class="col-md-12 my-auto">
+                                                <label>MATERIAL:</label>
+                                                <input id="" type="text">
+                                            </div>
+                                            <div class="col-md-12 my-auto">
+                                                <label>DESCUENTO:</label>
+                                                <input id="" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <!-- Botón para guardar datos -->
+                                            <button id="btn_limpiar" type="button" class="btn btn-primary"
+                                                onclick="limpiarCamposJhoana()">Borrar</button>
+                                            <button id="boton_guardar_datos_producto" type="button"
+                                                class="btn btn-primary">Guardar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button id="boton_cerrar_modal" type="button" class="btn btn-default"
+                                        data-dismiss="modal">Cerrar</button>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <!-- Botón para guardar datos -->
+                                    <button id="boton_guardar_datos_producto" type="button" class="btn btn-primary">
+                                        Guardar Datos
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="boton_cerrar_modal" type="button" class="btn btn-default" data-dismiss="modal">
+                                Cerrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal crear Inventario - Julián -->
+    <div class="modal fade" id="modal_crear_inventario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <label class="modal-title">FORMATO DE CREACIÓN DE INVENTARIO</label>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="table-wrapper">
+                    <div class="modal-body" align="center">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 my-auto-header">
+                                    <label class="label_azul">INFORMACIÓN INVENTARIO</label>
+                                </div>
+                                <div class="col-md-12 my-auto">
+                                    <label>Fecha de ingreso de inventario:</label>
+                                    <input id="input_fecha_inventario" type="date">
+                                </div>
+                                <hr>
+
+                                <div class="col-md-12 my-auto">
+                                    <label>Ingresa el nombre del producto:</label>
+                                    <input id="input_nombre_producto_modal_inventario" type="text">
+                                </div>
+                                <hr>
+
+                                <div class="modal-footer">
+                                    <!-- Botón para guardar datos -->
+                                    <button id="boton_guardar_datos_inventario" type="button" class="btn btn-primary">Guardar
+                                        Datos</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -295,32 +441,11 @@
                         <button id="boton_cerrar_modal" type="button" class="btn btn-default"
                             data-dismiss="modal">Cerrar</button>
                     </div>
-
-                <div class="modal-footer">
-                  <!-- Botón para guardar datos -->
-                  <button
-                    id="boton_guardar_datos_producto"
-                    type="button"
-                    class="btn btn-primary">
-                    Guardar Datos
-                  </button>
-
                 </div>
-              </div>
             </div>
-            <div class="modal-footer">
-              <button
-                id="boton_cerrar_modal"
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal">
-                Cerrar
-              </button>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
+
 
     <!-- Modal crear Personal - Hector López***************** -->
     <div class="modal fade" id="modal_crear_personal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -359,13 +484,17 @@
             </div>
         </div>
     </div>
+
+    <!-- Scripts, se recomienda no eliminar los scritps al final de este archivo -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="sweetalert2/sweetalert2.js"></script>
+    <script src="js/limpiarCampos.js"></script>
+    <script src="js/andresPedroza.js"></script>
+    <script src="js/jhoanaAlvarado.js"></script>
+    <script src="js/victorCarrillo.js"></script>
+    <script src="js/andresTorres.js"></script>
+    <script src="js/eudrey.js"></script>
+    <script src="js/julian.js"></script>
 </body>
 
-<script language="JavaScript" type="text/javascript" src="sweetalert2/sweetalert2.js"></script>
-<script language="JavaScript" type="text/javascript" src="js/limpiarCampos.js"></script>
-<script language="JavaScript" type="text/javascript" src="js/andresPedroza.js"></script>
-<script language="JavaScript" type="text/javascript" src="js/jhoanaAlvarado.js"></script>
-<script language="JavaScript" type="text/javascript" src="js/victorCarrillo.js"></script>
 </html>
-
-
