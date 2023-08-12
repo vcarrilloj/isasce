@@ -7,15 +7,43 @@ function victorCarrillo() {
          */
 
         // Por ejemplo:
-        var inputValor = $("#input_nombre_sucursal").val();
-        console.log('Valor capturado:', inputValor);
+        var inputValNomSuc = $("#input_nombre_sucursal").val();
+        console.log('inputValNomSuc:', inputValNomSuc);
+        var inputValDirSuc = $("#input_direccion_sucursal").val();
+        console.log('inputValNomSuc:', inputValDirSuc);
+        var inputValTipSuc = $("#select_tipo_sucursal").val();
+        console.log('inputValTipSuc:', inputValTipSuc);
+        var inputValFecSuc = $("#input_fecha_sucursal").val();
+        console.log('inputValFecSuc:', inputValFecSuc);
+        varinput_obsrvaciones_sucursal = $("#input_fecha_sucursal").val();
+        console.log('input_obsrvaciones_sucursal:', input_obsrvaciones_sucursal);
+        //
+        // Validar datos
+        if (inputValNomSuc === "") {
+            Swal.fire('Debe ingresar el nombre de la sucursal!', '', 'error');
+            return;
+        }
+        if (inputValDirSuc === "") {
+            Swal.fire('Debe ingresar la dirección de la sucursal!', '', 'error');
+            return;
+        }
+        if (inputValTipSuc === "") {
+            Swal.fire('Debe ingresar el tipo de la sucursal!', '', 'error');
+            return;
+        }
+        if (inputValFecSuc === "") {
+            Swal.fire('Debe ingresar la fecha creación de la sucursal!', '', 'error');
+            return;
+        }
         /** 
          * Se crea la ruta para enviar los datos al back end mediante la tecnología FETCH de Js
          *  
          */ 
         // Datos a enviar al servidor en formato JSON // agregar datos faltantes
         var datos = {
-            inputValor: inputValor
+            inputValNomSuc: inputValNomSuc,
+            inputValDirSuc: inputValDirSuc,
+            inputValTipSuc: inputValTipSuc
         };
 
         // Configuración para el fetch

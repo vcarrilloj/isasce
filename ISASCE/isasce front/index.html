@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- VMC 01-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -120,9 +119,40 @@
                                 <div class="col-md-12 my-auto-header">
                                     <label class="label_azul">INFORMACIÓN SUCURSAL</label>
                                 </div>
+                                <div class="form-group">
+                                    <label for="id">Nombre de la sucursal</label>
+                                    <input type="text" id="input_nombre_sucursal" name="nomsuc" class="form-control"
+                                        title="Title Nombre de la sucursal"
+                                        autocomplete="off" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="id">Dirección de la sucursal</label>
+                                    <input type="text" id="input_direccion_sucursal" name="dirsuc" class="form-control"
+                                        title="Title Dirección de la sucursal"
+                                        autocomplete="off" />
+                                </div>
                                 <div class="col-md-12 my-auto">
-                                    <label>Ingresa el nombre de la sucursal:</label>
-                                    <input id="input_nombre_sucursal" type="text">
+                                    <label>Tipo</label>
+                                    <select class="form-control" id="select_tipo_sucursal" required
+                                     title="Title Lista Tipos">
+                                        <option value="">Elija una opción</option>
+                                        <option value="P">Privada</option>
+                                        <option value="T">Pública</option>
+                                        <option value="M">Mixta</option>
+                                    </select>
+                                    <br>
+                                </div>                                
+                                <div class="form-group">
+                                    <label for="id">Fecha Creación</label>
+                                    <input type="date" id="input_fecha_sucursal" name="fecsuc" class="form-control"
+                                        title="Title Fecha Creación"
+                                        autocomplete="off" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="id">Observaciones de la sucursal</label>
+                                    <input type="text" id="input_obsrvaciones_sucursal" name="obssuc" class="form-control"
+                                        title="Title Observaciones de la sucursal"
+                                        autocomplete="off" />
                                 </div>
                                 <div class="modal-footer">
                                     <!-- Botón para guardar datos -->
