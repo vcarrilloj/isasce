@@ -56,6 +56,7 @@ function victorCarrillo() {
         };
 
         // URL del endpoint en el servidor Node.js
+        var url = 'http://localhost:4000/api/producto';
 
         // Realizar el fetch
         fetch(url, fetchConfig)
