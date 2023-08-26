@@ -56,7 +56,6 @@ function victorCarrillo() {
         };
 
         // URL del endpoint en el servidor Node.js
-        var url = 'URL_DEL_ENDPOINT';
 
         // Realizar el fetch
         fetch(url, fetchConfig)
