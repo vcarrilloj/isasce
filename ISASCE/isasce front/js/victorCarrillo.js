@@ -7,18 +7,24 @@ function victorCarrillo() {
          */
 
         // Por ejemplo:
+        var inputValCodSuc = $("#input_codigo_sucursal").val();
+        console.log('inputValCodSuc:', inputValCodSuc);
         var inputValNomSuc = $("#input_nombre_sucursal").val();
         console.log('inputValNomSuc:', inputValNomSuc);
         var inputValDirSuc = $("#input_direccion_sucursal").val();
-        console.log('inputValNomSuc:', inputValDirSuc);
+        console.log('inputValDirSuc:', inputValDirSuc);
         var inputValTipSuc = $("#select_tipo_sucursal").val();
         console.log('inputValTipSuc:', inputValTipSuc);
         var inputValFecSuc = $("#input_fecha_sucursal").val();
         console.log('inputValFecSuc:', inputValFecSuc);
-        varinput_obsrvaciones_sucursal = $("#input_fecha_sucursal").val();
-        console.log('input_obsrvaciones_sucursal:', input_obsrvaciones_sucursal);
+        var inputValObsSuc = $("#input_observaciones_sucursal").val();
+        console.log('inputValObsSuc:', inputValObsSuc);
         //
         // Validar datos
+        if (inputValCodSuc === "") {
+            Swal.fire('Debe ingresar el codigo de la sucursal!', '', 'error');
+            return;
+        }
         if (inputValNomSuc === "") {
             Swal.fire('Debe ingresar el nombre de la sucursal!', '', 'error');
             return;
@@ -35,16 +41,23 @@ function victorCarrillo() {
             Swal.fire('Debe ingresar la fecha creación de la sucursal!', '', 'error');
             return;
         }
+        if (inputValObsSuc === "") {
+            Swal.fire('Debe ingresar la observacion de la sucursal!', '', 'error');
+            return;
+        }
         /** 
          * Se crea la ruta para enviar los datos al back end mediante la tecnología FETCH de Js
          *  
          */ 
         // Datos a enviar al servidor en formato JSON // agregar datos faltantes
         var datos = {
+            inputValCodSuc:inputValCodSuc,
             inputValNomSuc: inputValNomSuc,
             inputValDirSuc: inputValDirSuc,
-            inputValTipSuc: inputValTipSuc
-        };
+            inputValTipSuc: inputValTipSuc,
+            inputValFecSuc:inputValFecSuc,
+            inputValObsSuc:inputValObsSuc
+            };
 
         // Configuración para el fetch
         var fetchConfig = {
@@ -56,7 +69,7 @@ function victorCarrillo() {
         };
 
         // URL del endpoint en el servidor Node.js
-        var url = 'http://localhost:4000/api/producto';
+        var url = 'http://localhost:4000/api/sucursal';
 
         // Realizar el fetch
         fetch(url, fetchConfig)
